@@ -65,3 +65,28 @@ spec:
         backend:
           serviceName: test-server
           servicePort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    ingress.appscode.com/type: NodePort
+    ingress.appscode.com/force-service-port: "false"
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /web
+        backend:
+          serviceName: test-server
+          servicePort: 80
+      - path: /exp
+        backend:
+          serviceName: test-server
+          servicePort: 80
+      - path: /
+        backend:
+          serviceName: test-server
+          servicePort: 80
