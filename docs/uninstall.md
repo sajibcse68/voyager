@@ -8,7 +8,7 @@ menu:
     parent: getting-started
     weight: 50
 product_name: voyager
-left_menu: product_voyager_5.0.0-rc.5
+menu_name: product_voyager_5.0.0-rc.5
 section_menu_id: getting-started
 url: /products/voyager/5.0.0-rc.5/getting-started/uninstall/
 aliases:
